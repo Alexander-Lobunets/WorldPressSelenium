@@ -11,13 +11,16 @@ public class Driver {
 //        }
 
 
-    public static WebDriver getDriver(){
+    public static WebDriver getInstance(){
+        if (webdriver == null){
+            webdriver = new FirefoxDriver();
+        }
         return webdriver;
     }
 
-    public static void setWebDriver(){
-        webdriver = new FirefoxDriver();
-    }
+//    public static void setWebDriver(){
+//        webdriver = new FirefoxDriver();
+//    }
 
 }
 
